@@ -1,0 +1,107 @@
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url(paul-pastourmatzis-0NetIOwaEqQ-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.item-description {
+    padding: 5px;
+    width: 100%;
+    min-width: 0;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.item-completed:checked ~ .item-description {
+    text-decoration: line-through;
+    color: #888;
+}
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 5px;
+    flex-wrap: wrap;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#add {
+    padding: 8px 14px;
+    font-weight: bold;
+    color: #ffffff;
+    background: green;
+    cursor: pointer;
+    width: 100%;
+    max-width: 200px;
+    box-sizing: border-box;
+    margin: 10px 0;
+}
+
+
+container{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f7f7f7;
+}
+
+.todo-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    padding: 32px 24px;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
+     width: 100%;
+    max-width: 400px;
+    min-height: 200px;
+    justify-content: center;
+
+}
+
+.todo-box .item-description {
+    margin-bottom: 16px;
+    width: 100%;
+}
+
+.todo-box #add {
+    width: 100%;
+}
+.todo-box h2{
+    margin-bottom: 16px;
+    font-size: 1.5rem;
+    color: #333;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+@media (max-width: 600px) {
+    .todo-box {
+        padding: 20px 8px;
+        width: 98vw;
+        max-width: 98vw;
+        min-width: 0;
+    }
+    .item {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 8px 2px;
+    }
+    .item-description, .todo-box #add {
+        font-size: 1rem;
+    }
+}
